@@ -1,0 +1,8 @@
+@startuml
+
+!include std_file.plantuml
+!include clase_dispositivo.plantuml
+
+Dispositivo *-- basic_ifstream: "\n\n\n\n[reference]\n- puerto"
+
+@enduml

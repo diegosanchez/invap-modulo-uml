@@ -1,0 +1,8 @@
+@startuml
+
+abstract class Serializable {
+
+        + ConvertirA() : string
+}
+
+@enduml

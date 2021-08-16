@@ -1,0 +1,11 @@
+@startuml
+
+!include clase_broker.plantuml
+!include clase_subscriptor.plantuml
+
+Broker o- Subscriptor: "\t\t- subscriptores"
+(Broker, Subscriptor) .. array
+
+class array <class T>
+
+@enduml

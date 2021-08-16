@@ -1,0 +1,25 @@
+@startuml
+
+class Dispositivo {
+        - ID : uint
+        - puerto : &basic_ifstream
+
+        + Dispositivo(ID : uint, ruta : std::string)
+        + ~Dispositivo()
+        # char* Sensar(char *buffer)
+}
+
+
+@enduml
+@startuml(id=WITHOUT)
+
+class Dispositivo {
+        - ID : uint
+
+        + Dispositivo(ID : uint, ruta : std::string)
+        + ~Dispositivo()
+        # char* Sensar(char *buffer)
+}
+
+
+@enduml

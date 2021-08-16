@@ -1,0 +1,17 @@
+@startuml
+
+!include sensor_temperatura.plantuml
+!include clase_dispositivo.plantuml
+
+Dispositivo <|-- SensorTemperatura
+
+note right of SensorTemperatura::Sensar
+char buffer[TAM]
+this->Sensar(buffer)
+atof(&medición)
+end note
+
+note left of SensorTemperatura::medición
+última medición...
+end note
+@enduml

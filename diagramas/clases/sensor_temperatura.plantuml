@@ -1,0 +1,11 @@
+@startuml
+
+class SensorTemperatura {
+        - medición : double
+
+        + SensorTemperatura()
+        + Publicar()
+        - Sensar()
+}
+
+@enduml

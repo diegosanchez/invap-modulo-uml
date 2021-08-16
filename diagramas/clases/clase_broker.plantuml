@@ -1,0 +1,12 @@
+@startuml
+
+class Broker {
+
+        + Broker() 
+        + ~Broker()
+
+        + AgregarSubscriptor(s : &Subscriptor)
+        + Publicar(m : Mensaje)
+}
+
+@enduml

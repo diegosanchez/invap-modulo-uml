@@ -1,0 +1,16 @@
+@startuml
+
+/'
+ ' skinparam classAttributeIconSize 0
+ '/
+
+class SensorTemperatura {
+        - ID : uint
+        - medición : double
+
+        + SensorTemperatura()
+        + Publicar()
+        - Sensar()
+}
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+
+class basic_ifstream {
+        basic_ifstream()
+        "~basic_ifstream()"
+
+        open()
+        close()
+}
+
+@enduml

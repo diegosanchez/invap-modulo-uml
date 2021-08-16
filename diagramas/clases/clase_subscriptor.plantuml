@@ -1,0 +1,7 @@
+@startuml
+
+class Subscriptor {
+        Notificar(m : Mensaje)
+}
+
+@enduml

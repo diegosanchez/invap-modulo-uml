@@ -1,0 +1,8 @@
+@startuml
+
+!include clase_broker.plantuml
+!include clase_mensaje.plantuml
+
+Broker .> Mensaje: "\t\t"
+
+@enduml

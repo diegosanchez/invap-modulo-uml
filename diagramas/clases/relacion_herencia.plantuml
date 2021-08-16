@@ -1,0 +1,8 @@
+@startuml
+
+!include sensor_temperatura.plantuml
+!include clase_dispositivo.plantuml
+
+Dispositivo <|-- SensorTemperatura
+
+@enduml

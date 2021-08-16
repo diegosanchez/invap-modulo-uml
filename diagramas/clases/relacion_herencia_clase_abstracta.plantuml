@@ -1,0 +1,9 @@
+@startuml
+
+!include clase_mensaje.plantuml
+!include clase_serializable.plantuml
+
+
+Serializable <|-- Mensaje
+
+@enduml

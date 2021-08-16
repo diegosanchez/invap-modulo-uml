@@ -1,0 +1,11 @@
+@startuml
+
+class Mensaje {
+
+        + Mensaje() 
+        + ~Mensaje()
+
+        + ConvertirA() : string
+}
+
+@enduml
