@@ -1,0 +1,9 @@
+@startuml
+
+class QR {
+        - valor : Image
+
+        + verificar(consulta : Credencial) : bool
+}
+
+@enduml

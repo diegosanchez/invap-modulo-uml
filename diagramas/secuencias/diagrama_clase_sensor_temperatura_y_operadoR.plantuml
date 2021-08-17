@@ -1,0 +1,7 @@
+@startuml
+
+!include ../clases/clase_sensor_temperatura.plantuml 
+!include ../clases/clase_usuario.plantuml 
+
+SensorTemperatura o- "\t 1" Usuario: "\t\t - operario"
+@enduml

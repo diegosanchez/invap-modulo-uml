@@ -1,0 +1,19 @@
+@startuml
+":TestCase" -> ":SensorTemperatura": loging(usuario,password)
+
+activate ":SensorTemperatura"
+        loop cada usuario
+                ":SensorTemperatura" -> ":Usuario": verificar(usuario, password)
+
+                activate ":Usuario"
+                        alt password == this->password && usuario == this->usuario
+                                ":Usuario" --> ":SensorTemperatura": [ok]
+                        else  
+                                ":Usuario" --> ":SensorTemperatura": [error]
+                        end
+                deactivate ":Usuario"
+        end
+        
+        ":SensorTemperatura" --> ":TestCase": [error]
+
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+class Usuario {
+        - id : string
+        - password : Credencial
+
+        + verificar(id : string, pwd : Credencial) : bool
+}
+
+
+@enduml
+@startuml(id=WITHOUT)
+
+class Usuario {
+        - id : string
+
+        + verificar(id : string, pwd : Credencial) : bool
+}
+
+
+@enduml

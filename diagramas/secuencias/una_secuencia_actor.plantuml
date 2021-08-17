@@ -1,0 +1,11 @@
+@startuml
+
+skinparam style strictuml
+actor Operador
+
+Operador -> ": SensorTemperatura": loging(usuario, password)
+activate ": SensorTemperatura"
+": SensorTemperatura" -> ": SensorTemperatura": verificacion(usuario, password)
+": SensorTemperatura" --> Operador: [ok]
+
+@enduml

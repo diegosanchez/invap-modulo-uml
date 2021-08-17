@@ -1,0 +1,14 @@
+@startuml
+
+!include ../clases/clase_sensor_temperatura.plantuml 
+!include ../clases/clase_usuario.plantuml!WITHOUT
+!include ../clases/clase_credencial.plantuml
+!include ../clases/clase_password.plantuml
+!include ../clases/clase_qr.plantuml
+
+SensorTemperatura o-- "0..*" Usuario: "\t\t - operarios"
+Usuario o- "\t\t1" Credencial: "\t\t - credencial"
+Credencial <|-- Password
+Credencial <|-- QR
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+":TestCase" -> ":SensorTemperatura": loging(usuario,password)
+
+activate ":SensorTemperatura"
+        loop cada usuario
+                ":SensorTemperatura" -> ":Usuario": verificar(usuario, password)
+
+                activate ":Usuario"
+                        ":Usuario" -> ":Credencial": verificar(password)
+                        note right
+                                Omitimos el comportamiento
+                                polimórfo 'intencionalmente'
+                        end note
+                        activate ":Credencial"
+                                alt credencial valido
+                                        ":Credencial" --> ":Usuario": [ok]
+                                else  
+                                        ":Credencial" --> ":Usuario": [error]
+                                end
+                        deactivate ":Credencial"
+                deactivate ":Usuario"
+        end
+        
+        ":SensorTemperatura" --> ":TestCase": [error]
+
+@enduml

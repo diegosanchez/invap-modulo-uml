@@ -10,6 +10,7 @@ class SensorTemperatura {
 
         + SensorTemperatura()
         + Publicar()
+        + verificar(id : string, pwd : Credencial) : bool
         - Sensar()
 }
 
