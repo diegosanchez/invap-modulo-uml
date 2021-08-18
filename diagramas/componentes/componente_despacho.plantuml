@@ -1,0 +1,21 @@
+@startuml
+
+!$BussinesLogic  = "Logica de Negocio"
+!$UseCases  = "Caso de Uso"
+!$Dispatch = "Despacho"
+
+package $Dispatch {
+        [ $Dispatch ]
+}
+
+package "$BussinesLogic" {
+        package "$UseCases" {
+                interface Login
+                Login - [ $UseCases ]
+        }
+}
+
+
+[ $Dispatch ] -> Login: "<<use>>"
+
+@enduml
