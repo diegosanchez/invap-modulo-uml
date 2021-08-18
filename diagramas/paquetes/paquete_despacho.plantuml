@@ -1,0 +1,12 @@
+@startuml
+
+!include ../paquetes/clase_loguearse_como_operador.plantuml!PACKAGE
+!include ../clases/clase_htmlserver.plantuml
+!include ../clases/clase_cmd.plantuml
+
+HtmlServer ..> LoguearseComoOperador: "<<use>>"
+Cmd ..> LoguearseComoOperador: "<<use>>"
+
+
+
+@enduml

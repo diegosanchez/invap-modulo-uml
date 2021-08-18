@@ -1,0 +1,26 @@
+@startuml
+
+!$Dispatch = "Despacho"
+!$BussinesLogic  = "Logica de Negocio"
+!$Presenter  = "Presentador"
+!$Persistence  = "Hardward"
+!$UseCases  = "Caso de Uso"
+!$Entities  = "Entidades"
+
+package "$Dispatch" {}
+
+package "$BussinesLogic" {
+        package "$UseCases" {}
+        package "$Entities" {}
+
+        "$UseCases" ..> "$Entities"
+}
+
+package "$Presenter" {}
+package "$Persistence" {}
+
+"$Dispatch" ...> "$BussinesLogic"
+"$Presenter" ...> "$BussinesLogic"
+"$Persistence" ..> "$Entities"
+
+@enduml

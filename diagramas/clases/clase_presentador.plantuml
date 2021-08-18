@@ -1,0 +1,12 @@
+@startuml
+
+!$Presenter = "Presentador"
+
+
+package "$Presenter" {
+        class ClienteBroker {
+                + Publicar(d : Dispositivo) 
+        }
+}
+
+@enduml

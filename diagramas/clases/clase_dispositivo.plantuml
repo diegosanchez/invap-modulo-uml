@@ -23,3 +23,25 @@ class Dispositivo {
 
 
 @enduml
+@startuml(id=PACKAGE)
+
+!$BussinesLogic  = "Logica de Negocio"
+!$Persistence  = "Hardward"
+!$UseCases  = "Caso de Uso"
+!$Entities  = "Entidades"
+
+package "$BussinesLogic" {
+        package "$Entities" {
+                class Dispositivo {
+                        - ID : uint
+
+                        + Dispositivo(ID : uint, ruta : std::string)
+                        + ~Dispositivo()
+                        # char* Sensar(char *buffer)
+                }
+        }
+}
+
+
+
+@enduml

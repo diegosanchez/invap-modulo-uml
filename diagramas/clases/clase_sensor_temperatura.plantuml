@@ -1,8 +1,8 @@
 @startuml
 
 /'
- ' skinparam classAttributeIconSize 0
- '/
+' skinparam classAttributeIconSize 0
+'/
 
 class SensorTemperatura {
         - ID : uint
@@ -12,6 +12,26 @@ class SensorTemperatura {
         + Publicar() : Mensaje
         + verificar(id : string, pwd : Credencial) : bool
         - Sensar()
+}
+
+@enduml
+@startuml(id=PACKAGE)
+!$BussinesLogic  = "Logica de Negocio"
+!$Entities  = "Entidades"
+
+package "$BussinesLogic" {
+        package "$Entities" {
+                class SensorTemperatura {
+                        - ID : uint
+                        - medición : double
+
+                        + SensorTemperatura()
+                        + Publicar() : Mensaje
+                        + verificar(id : string, pwd : Credencial) : bool
+                        + Medicion() : double
+                        - Sensar()
+                }
+        }
 }
 
 @enduml

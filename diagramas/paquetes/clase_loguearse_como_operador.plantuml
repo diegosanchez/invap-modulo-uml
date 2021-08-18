@@ -1,0 +1,14 @@
+@startuml(id=PACKAGE)
+
+!$BussinesLogic  = "Logica de Negocio"
+!$UseCases  = "Caso de Uso"
+
+package "$BussinesLogic" {
+        package "$UseCases" {
+                class LoguearseComoOperador {
+                        + login(id : string, pwd : Credencial)
+                }
+        }
+}
+
+

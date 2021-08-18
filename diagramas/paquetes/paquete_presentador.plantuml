@@ -1,0 +1,29 @@
+@startuml
+
+!include ../clases/clase_sensor_temperatura.plantuml!PACKAGE
+!include ../clases/clase_dispositivo.plantuml!PACKAGE
+!include ../clases/clase_puerto.plantuml
+!include ../clases/clase_presentador.plantuml
+
+!$BussinesLogic  = "Logica de Negocio"
+!$Presenter = "Presentador"
+!$Persistence  = "Hardward"
+!$UseCases  = "Caso de Uso"
+!$Entities  = "Entidades"
+
+package "$BussinesLogic" {
+        package "$Entities" {
+                Dispositivo <|-- SensorTemperatura
+                Puerto -o Dispositivo
+                
+        }
+}
+
+package "$Presenter" {
+        ClienteBroker ..> SensorTemperatura: "<<use>>"
+}
+
+package "<<Library>>\nMQTT" {}
+
+"<<Library>>\nMQTT" <. "$Presenter" 
+@enduml

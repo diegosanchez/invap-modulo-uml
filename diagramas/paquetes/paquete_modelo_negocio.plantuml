@@ -1,0 +1,30 @@
+@startuml
+
+!include ../clases/clase_sensor_temperatura.plantuml!PACKAGE
+!include ../clases/clase_dispositivo.plantuml!PACKAGE
+!include ../clases/clase_puerto.plantuml
+!include ../paquetes/clase_loguearse_como_operador.plantuml!PACKAGE
+
+!$BussinesLogic  = "Logica de Negocio"
+!$Persistence  = "Hardward"
+!$UseCases  = "Caso de Uso"
+!$Entities  = "Entidades"
+
+package "$BussinesLogic" {
+        package "$Entities" {
+                Dispositivo <|-- SensorTemperatura
+                Dispositivo o- Puerto
+                
+        }
+
+        "$UseCases" ..> "Entidades"
+}
+
+package "$Persistence" {
+        class LM35 {
+                Sensar(buffer : char*) : char*
+        }
+        Puerto <|- LM35
+}
+
+@enduml

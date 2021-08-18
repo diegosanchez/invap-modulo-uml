@@ -1,0 +1,17 @@
+@startuml(id=PACKAGE)
+
+/'
+ ' skinparam classAttributeIconSize 0
+ '/
+!$BussinesLogic  = "Logica de Negocio"
+!$Entities  = "Entidades"
+
+package "$BussinesLogic" {
+        package "$Entities" {
+                abstract class Puerto {
+                        {abstract}+ Sensar(buffer : char*) : char*
+                }
+        }
+}
+
+@enduml

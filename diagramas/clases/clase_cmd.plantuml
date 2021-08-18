@@ -1,0 +1,13 @@
+@startuml
+
+!$Dispatch = "Despacho"
+
+package "$Dispatch" {
+        package CLI {
+                class Cmd{
+                        + login(id : string, pwd : Credencial)
+                }
+        }
+}
+
+@enduml

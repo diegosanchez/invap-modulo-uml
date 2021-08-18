@@ -1,0 +1,13 @@
+@startuml
+
+!$Dispatch = "Despacho"
+
+package "$Dispatch" {
+        package WebApp {
+                class HtmlServer {
+                        + login(id : string, pwd : Credencial)
+                }
+        }
+}
+
+@enduml
