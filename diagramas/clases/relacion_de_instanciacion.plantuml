@@ -1,0 +1,13 @@
+@startuml
+
+!include clase_sensor_temperatura.plantuml
+!include clase_mensaje.plantuml
+
+SensorTemperatura .> Mensaje: "\t<<instanciate>>\t"
+
+note left of SensorTemperatura::Publicar
+void SensorTemperatura::Publicar() { 
+  return Mensaje()
+}
+end note
+@enduml

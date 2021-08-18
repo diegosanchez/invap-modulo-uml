@@ -4,6 +4,6 @@
 !include interfase_serializable.plantuml
 
 
-Serializable <|-- Mensaje
+Serializable <|.. Mensaje
 
 @enduml
