@@ -1,0 +1,13 @@
+@startuml
+
+title Tiempo publica mediciones del SensorDeTemperatura\n\n
+
+start
+if (pendiente?) then (si)
+        :Publicar medicion;
+else (no)
+        :Verificar sensor;
+endif
+stop
+
+@enduml

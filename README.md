@@ -45,27 +45,17 @@ Verifiqué el funcionamiento en Mac OS y Linux
 
 ## Ejemplo de diagramas
 
-### Clases
+| Diagrama     | Carpeta                             |
+|--------------|-------------------------------------|
+| Clases       | [diagramas](diagramas/clases)       |
+| Secuencia    | [diagramas](diagramas/secuencias)   |
+| Paquetes     | [diagramas](diagramas/paquetes)     |
+| Componentes  | [diagramas](diagramas/componentes)  |
+| Casos de uso | [diagramas](diagramas/casos_de_uso) |
+| Actividad    | [diagramas](diagramas/actividad)    |
 
-[Clases][clases]
-
-#### Secuencias
-
-[Secuencias][secuencias]
-
-#### Paquetes
-
-[Paquetes][paquetes]
-
-#### Componentes
-
-[Componentes][componentes]
 
 [Presentacion]: https://docs.google.com/presentation/d/1nkawKzySthLmkAl0huwdfCMsF1NFS2WVCglG1G4kzjg/edit?usp=sharing]
-[clases]: diagramas/clases/
-[secuencias]: diagramas/secuencias/
-[paquetes]: diagramas/paquetes/
-[componentes]: diagramas/componentes/
 
 [external_vscode]: https://code.visualstudio.com/Download
 [external_pplantuml]: https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml

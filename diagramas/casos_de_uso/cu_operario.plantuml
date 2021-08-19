@@ -1,0 +1,16 @@
+@startuml
+
+title Operaciones en el SensorDeTemperatura
+
+actor Operador
+
+:Administrador: --> (Cambiar firmware)
+:Administrador: --> (Ingresar sistema)
+
+:Operador: ---> (Actualizar Configuración)
+:Operador: ---> (Poner en mantenimiento)
+:Operador: ---> (Ingresar sistema)
+
+:Administrador: --> (Publicar medicion)
+:Tiempo: --> (Publicar medicion)
+@enduml

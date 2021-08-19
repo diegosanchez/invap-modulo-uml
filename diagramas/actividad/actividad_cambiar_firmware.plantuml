@@ -1,0 +1,28 @@
+@startuml
+
+title Actualizar el firmware del SensorDeTemperatura\n\n
+
+|Administrador|
+start
+:Ingresar;
+|Sistema|
+repeat 
+        :Desplegar login;
+        :Ingresa id, password<
+        :Confirmar:
+        backward :Warning;
+repeat while (invalido?) is (si) not (no)
+|Administrador|
+:Publicar medicion;
+|Sistema|
+:Envia datos>
+|Administrador|
+:Cambiar firmware;
+|Sistema|
+:Ingresa archivo<
+:Confirmar;
+|Administrador|
+:Salir;
+stop
+
+@enduml
