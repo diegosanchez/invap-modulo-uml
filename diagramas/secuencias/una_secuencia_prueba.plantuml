@@ -3,9 +3,9 @@ skinparam style strictuml
 
 title Un usuario se loguea con sus credenciales correctas\n
 
-":TestCase" -> ":SensorTemperatura": loging(usuario, password)
-activate ":SensorTemperatura"
-":SensorTemperatura" -> ":SensorTemperatura": verificacion(usuario, password)
-":SensorTemperatura" --> ":TestCase": [ok]
+":TestCase" -> "variableNombre :SensorTemperatura": loging(usuario, password)
+activate "variableNombre :SensorTemperatura"
+"variableNombre :SensorTemperatura" -> "variableNombre :SensorTemperatura": verificacion(usuario, password)
+"variableNombre :SensorTemperatura" --> ":TestCase": [ok]
 
 @enduml
