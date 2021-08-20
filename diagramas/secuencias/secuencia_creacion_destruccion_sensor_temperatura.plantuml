@@ -1,0 +1,26 @@
+@startuml
+
+activate ":TestCase"
+        ":TestCase" -> ":TestCase": setup
+
+        create "s :SensorTemperatura"
+        ":TestCase" -> "s :SensorTemperatura": <<constructor>>
+
+        activate "s :SensorTemperatura"
+                "s :SensorTemperatura" -> ":Usuario": verificar(usuario, password)
+                activate ":Usuario"
+                        alt password == this->password && usuario == this->usuario
+                                ":Usuario" --> "s :SensorTemperatura": [ok]
+                        else  
+                                ":Usuario" --> "s :SensorTemperatura": [error]
+                        end
+                deactivate ":Usuario"
+                "s :SensorTemperatura" --> ":TestCase": [error]
+
+        deactivate "s :SensorTemperatura"
+        
+        ":TestCase" -> ":TestCase": tearDown
+        ":TestCase" -> "s :SensorTemperatura" !! : delete
+
+        
+@enduml
