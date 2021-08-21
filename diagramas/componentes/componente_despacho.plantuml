@@ -16,6 +16,6 @@ package "$BussinesLogic" {
 }
 
 
-[ $Dispatch ] -> Login: "<<use>>"
+[ $Dispatch ] -( Login: "<<use>>"
 
 @enduml
