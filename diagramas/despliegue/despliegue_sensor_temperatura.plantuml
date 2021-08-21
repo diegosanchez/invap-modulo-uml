@@ -1,0 +1,12 @@
+@startuml
+
+artifact SensorTemperatura <<firmware>>
+artifact ClienteMQTT <<library>>
+
+SensorTemperatura -(0 ClienteMQTT
+
+node Hardware as "SensorTemperatura"
+
+Hardware <-- SensorTemperatura: RS232 / Local Port
+Hardware <-- SensorTemperatura: HTTP / Internet
+@enduml     
