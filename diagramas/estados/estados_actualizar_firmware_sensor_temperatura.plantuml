@@ -1,0 +1,17 @@
+@startuml
+
+title SensorTemperatura: Actualización de firmware
+
+[*] -> Ocioso
+Ocioso ---> Actualizar: /login
+Actualizar --> Publicacion: [datos pendientes]
+Actualizar -> Cargar: [role = admin]/cambiar_firmware 
+Cargar -> Ocioso: [satisfactorio]
+
+state join_error <<join>>
+Publicacion --> join_error: [error]
+Cargar ---> join_error: [error]
+join_error --> FueraServicio: [cantidad_errores > E]
+FueraServicio -> [*]
+
+@enduml

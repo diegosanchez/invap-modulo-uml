@@ -35,6 +35,8 @@ Verifiqué el funcionamiento en Mac OS y Linux
 | Clases y paquetes | https://plantuml.com/es/class-diagram     |
 | Secuencia         | https://plantuml.com/es/sequence-diagram  |
 | Componentes       | https://plantuml.com/es/component-diagram |
+| Estados           | https://plantuml.com/state-diagram        |
+
 
 ##### Elementos específicos
 
@@ -53,6 +55,7 @@ Verifiqué el funcionamiento en Mac OS y Linux
 | Componentes  | [diagramas](diagramas/componentes)  |
 | Casos de uso | [diagramas](diagramas/casos_de_uso) |
 | Actividad    | [diagramas](diagramas/actividad)    |
+| Estados      | [diagramas](diagramas/estados)      |
 
 
 [Presentacion]: https://docs.google.com/presentation/d/1nkawKzySthLmkAl0huwdfCMsF1NFS2WVCglG1G4kzjg/edit?usp=sharing]

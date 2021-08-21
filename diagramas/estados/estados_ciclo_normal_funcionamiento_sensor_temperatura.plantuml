@@ -1,0 +1,16 @@
+@startuml
+
+title SensorTemperatura: Ciclo normal de funcionamiento
+
+[*] -> Ocioso
+Ocioso -> Lectura: expiro timer / medir
+Lectura -> Publicacion: /publicar
+Publicacion -> Ocioso
+
+state join_error <<join>>
+Lectura --> join_error: [error]
+Publicacion --> join_error: [error]
+join_error --> FueraServicio: [cantidad_errores > E]
+FueraServicio -> [*]
+
+@enduml

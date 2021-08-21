@@ -1,0 +1,7 @@
+@startuml
+
+:Administrador: --> (Cambiar firmware)
+:Administrador: --> (Ingresar sistema)
+:Administrador: --> (Publicar medicion)
+
+@enduml
