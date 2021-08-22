@@ -3,7 +3,9 @@
 !$Dispatch = "Despacho"
 !$BussinesLogic  = "Logica de Negocio"
 !$Presenter  = "Presentador"
-!$Persistence  = "Hardward"
+!$Persistence  = "Persistencia"
+!$Hardware = "Hardward"
+!$DB = "Database"
 !$UseCases  = "Caso de Uso"
 !$Entities  = "Entidades"
 
@@ -17,10 +19,13 @@ package "$BussinesLogic" {
 }
 
 package "$Presenter" {}
-package "$Persistence" {}
+package "$Persistence" {
+        package "$DB" {}
+        package "$Hardware" {}
+}
 
 "$Dispatch" ...> "$BussinesLogic"
 "$Presenter" ...> "$BussinesLogic"
-"$Persistence" ..> "$Entities"
+"$Hardware" ..> "$Entities"
 
 @enduml
