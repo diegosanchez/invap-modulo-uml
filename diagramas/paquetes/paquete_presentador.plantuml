@@ -5,13 +5,13 @@
 !include ../clases/clase_puerto.plantuml
 !include ../clases/clase_presentador.plantuml
 
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Presenter = "Presentador"
 !$Persistence  = "Hardward"
 !$UseCases  = "Caso de Uso"
 !$Entities  = "Entidades"
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$Entities" {
                 Dispositivo <|-- SensorTemperatura
                 Puerto -o Dispositivo

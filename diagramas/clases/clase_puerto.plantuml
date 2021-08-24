@@ -3,10 +3,10 @@
 /'
  ' skinparam classAttributeIconSize 0
  '/
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Entities  = "Entidades"
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$Entities" {
                 abstract class Puerto {
                         {abstract}+ Sensar(buffer : char*) : char*

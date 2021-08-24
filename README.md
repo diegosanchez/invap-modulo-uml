@@ -2,6 +2,13 @@
 
 [[UML] Capacitación INVAP][Presentacion]
 
+**Planteamos la utilización de PlantUML por las siguientes razones**:
+
+- Se pueden versionan los distintos diagramas
+- Existen herramientas que lo interpretan y no requiere la instalación de un software. Ver [aquí](#editor-online)
+- La utilización de `include` facilita la actualización de los diagramas
+- Gitlab permite embeber diagramas de plantuml en los archivos `.md`. Ver [aquí](https://git.partners.invap.com.ar/pyo/capacitacion/sw-embebido/sandbox/curso/test-uml-gitlab-capabilities)
+
 ## Herramientas
 
 ### Editor online

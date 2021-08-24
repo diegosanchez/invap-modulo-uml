@@ -1,7 +1,7 @@
 @startuml
 
 !$Dispatch = "Despacho"
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Presenter  = "Presentador"
 !$Persistence  = "Persistencia"
 !$Hardware = "Hardward"
@@ -11,7 +11,7 @@
 
 package "$Dispatch" {}
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$UseCases" {}
         package "$Entities" {}
 
@@ -24,8 +24,8 @@ package "$Persistence" {
         package "$Hardware" {}
 }
 
-"$Dispatch" ...> "$BussinesLogic"
-"$Presenter" ...> "$BussinesLogic"
+"$Dispatch" ...> "$Business"
+"$Presenter" ...> "$Business"
 "$Hardware" ..> "$Entities"
 
 @enduml

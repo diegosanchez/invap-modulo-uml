@@ -25,12 +25,12 @@ class Dispositivo {
 @enduml
 @startuml(id=PACKAGE)
 
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Persistence  = "Hardward"
 !$UseCases  = "Caso de Uso"
 !$Entities  = "Entidades"
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$Entities" {
                 class Dispositivo {
                         - ID : uint

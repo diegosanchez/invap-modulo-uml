@@ -1,6 +1,6 @@
 @startuml
 
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Dispatch = "Despacho"
 
 !$Persistence  = "Persistencia"
@@ -19,7 +19,7 @@ package "$Persistence" {
         [ $DB ]
 }
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$UseCases" {
                 interface Login
                 Login - [ $UseCases ]

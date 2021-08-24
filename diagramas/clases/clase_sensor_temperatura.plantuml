@@ -17,10 +17,10 @@ class SensorTemperatura {
 
 @enduml
 @startuml(id=PACKAGE)
-!$BussinesLogic  = "Logica de Negocio"
+!$Business  = "Logica de Negocio"
 !$Entities  = "Entidades"
 
-package "$BussinesLogic" {
+package "$Business" {
         package "$Entities" {
                 class SensorTemperatura {
                         - ID : uint
