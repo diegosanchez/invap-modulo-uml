@@ -6,7 +6,8 @@
 !include ../paquetes/clase_loguearse_como_operador.plantuml!PACKAGE
 
 !$BussinesLogic  = "Logica de Negocio"
-!$Persistence  = "Hardward"
+!$Persistence  = "Persistencia"
+!$Hardware = "Hardward"
 !$UseCases  = "Caso de Uso"
 !$Entities  = "Entidades"
 
@@ -21,8 +22,10 @@ package "$BussinesLogic" {
 }
 
 package "$Persistence" {
-        class LM35 {
-                Sensar(buffer : char*) : char*
+        package "$Hardware" {
+                class LM35 {
+                        Sensar(buffer : char*) : char*
+                }
         }
         Puerto <|- LM35
 }

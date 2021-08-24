@@ -1,11 +1,22 @@
 @startuml
 
 !$BussinesLogic  = "Logica de Negocio"
-!$UseCases  = "Caso de Uso"
 !$Dispatch = "Despacho"
+
+!$Persistence  = "Persistencia"
+!$Hardware = "Hardware"
+!$DB = "Database"
+
+!$UseCases  = "Caso de Uso"
+!$Entities  = "Entidades"
 
 package $Dispatch {
         [ $Dispatch ]
+}
+
+package "$Persistence" {
+        [ $Hardware ] 
+        [ $DB ]
 }
 
 package "$BussinesLogic" {
@@ -13,9 +24,17 @@ package "$BussinesLogic" {
                 interface Login
                 Login - [ $UseCases ]
         }
+
+        package "$Entities" {
+                interface Puerto
+
+                Puerto - [ $Entities ]
+        }
+
+        
 }
 
 
-[ $Dispatch ] -( Login: "<<use>>"
-
+[ $Dispatch ] --( Login: "<<use>>"
+[ $Hardware ] --( Puerto: "<<use>>"
 @enduml
