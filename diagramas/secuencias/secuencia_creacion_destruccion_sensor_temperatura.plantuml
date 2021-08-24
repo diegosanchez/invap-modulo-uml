@@ -6,10 +6,11 @@ activate ":TestCase"
         create "s :SensorTemperatura"
         ":TestCase" -> "s :SensorTemperatura": <<constructor>>
 
+        ":TestCase" -> "s :SensorTemperatura": loging(usuario,password)
         activate "s :SensorTemperatura"
                 "s :SensorTemperatura" -> ":Usuario": verificar(usuario, password)
                 activate ":Usuario"
-                        alt password == this->password && usuario == this->usuario
+                        alt password == this->password && usuario == this->id
                                 ":Usuario" --> "s :SensorTemperatura": [ok]
                         else  
                                 ":Usuario" --> "s :SensorTemperatura": [error]

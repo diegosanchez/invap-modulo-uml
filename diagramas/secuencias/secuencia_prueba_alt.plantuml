@@ -4,7 +4,7 @@
 activate ":SensorTemperatura"
         ":SensorTemperatura" -> ":Usuario": verificar(usuario, password)
         activate ":Usuario"
-                alt password == this->password && usuario == this->usuario
+                alt password == this->password && usuario == this->id
                         ":Usuario" --> ":SensorTemperatura": [ok]
                 else  
                         ":Usuario" --> ":SensorTemperatura": [error]

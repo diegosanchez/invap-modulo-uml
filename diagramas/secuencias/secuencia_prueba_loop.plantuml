@@ -6,14 +6,16 @@ activate ":SensorTemperatura"
                 ":SensorTemperatura" -> ":Usuario": verificar(usuario, password)
 
                 activate ":Usuario"
-                        alt password == this->password && usuario == this->usuario
-                                ":Usuario" --> ":SensorTemperatura": [ok]
+                        alt password == this->password && usuario == this->id
+                                ":Usuario" --> ":SensorTemperatura": [ok = true]
                         else  
-                                ":Usuario" --> ":SensorTemperatura": [error]
+                                ":Usuario" --> ":SensorTemperatura": [error = false]
                         end
                 deactivate ":Usuario"
         end
         
-        ":SensorTemperatura" --> ":TestCase": [error]
+        /'
+         ' ":SensorTemperatura" --> ":TestCase": [error = false]
+         '/
 
 @enduml
