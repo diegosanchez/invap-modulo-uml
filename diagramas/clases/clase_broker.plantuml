@@ -7,6 +7,12 @@ class Broker {
 
         + AgregarSubscriptor(s : &Subscriptor)
         + Publicar(m : Mensaje)
+        + PublicarPendientes()
 }
+
+note left of Broker::PublicarPendientes
+for m in mensajesPendientes:
+  # ... m.ConvertirA()
+end note
 
 @enduml

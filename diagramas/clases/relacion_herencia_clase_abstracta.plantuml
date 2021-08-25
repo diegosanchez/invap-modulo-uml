@@ -1,9 +1,10 @@
 @startuml
 
+!include clase_broker.plantuml
 !include clase_mensaje.plantuml
 !include clase_serializable.plantuml
 
-
+Broker o- "0..*" Serializable: "\t\t - mensajesPendientes"
 Serializable <|-- Mensaje
 
 @enduml
